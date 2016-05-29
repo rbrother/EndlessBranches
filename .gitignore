@@ -79,3 +79,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Output
+*.exe
+*.dll
+*.mdb
+*.pdb
