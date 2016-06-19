@@ -10,11 +10,16 @@ public class Jump : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyUp("a")) {
-            print("A has been let up");
+        var boxCollider = GetComponent<BoxCollider2D>();
+        var touching = boxCollider.IsTouchingLayers();
+        var rigidBody = GetComponent<Rigidbody2D>();
+        if (Input.GetKeyUp("a") && touching) {
+            rigidBody.velocity = new Vector2(-3, 3);
         }
-        else if (Input.GetKeyUp("d")) {
-            print("D has been let up");
+        else if (Input.GetKeyUp("d") && touching) {
+            rigidBody.velocity = new Vector2(3, 3);
+            
         }
     }
 }
+
