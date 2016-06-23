@@ -14,10 +14,10 @@ public class Jump : MonoBehaviour {
         var touching = boxCollider.IsTouchingLayers();
         var rigidBody = GetComponent<Rigidbody2D>();
         if (Input.GetKeyUp("a") && touching) {
-            rigidBody.velocity = new Vector2(-3, 3);
+            rigidBody.velocity = new Vector2(-7, 7);
         }
         else if (Input.GetKeyUp("d") && touching) {
-            rigidBody.velocity = new Vector2(3, 3);
+            rigidBody.velocity = new Vector2(7, 7);
             
         }
     }
