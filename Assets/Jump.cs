@@ -6,11 +6,21 @@ public class Jump : MonoBehaviour {
 
     float jumpForce = 0;
     bool barGrowing = false;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
+    Sprite loadingSprite;
+    Transform ukkoSkaalaus;
+    SpriteRenderer ukkoSpriteRenderer;
+    Sprite firstFlyingSprite;
+    Sprite regularSprite;
+   
+    // Use this for initialization
+    void Start () {
+	    loadingSprite = Resources.Load("RoffeChargingHisJump", typeof(Sprite)) as Sprite;
+        firstFlyingSprite = Resources.Load("RoffeHavingHisLeftFootOut", typeof(Sprite)) as Sprite;
+        Debug.Log(loadingSprite);
+        ukkoSkaalaus = transform.FindChild("ukko");
+        ukkoSpriteRenderer = ukkoSkaalaus.GetComponent<SpriteRenderer>();
+        regularSprite = ukkoSpriteRenderer.sprite;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,17 +29,21 @@ public class Jump : MonoBehaviour {
         var rigidBody = GetComponent<Rigidbody2D>();
         var jumpBar = transform.FindChild("jumpBar");
         barGrowing = (Input.GetKey("a") || Input.GetKey("d")) && touching;
-
         if (barGrowing){
+            ukkoSpriteRenderer.sprite = loadingSprite;
             if (jumpForce <= 100){
             jumpForce = jumpForce + Time.deltaTime * 200;
             }
                      
         }
 
+        if (touching && !barGrowing) {
+            ukkoSpriteRenderer.sprite = regularSprite;
+        }
+
         if((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
+            ukkoSpriteRenderer.sprite = firstFlyingSprite;
             var directionMultiplier = Input.GetKeyUp("a") ? -1 : 1;
-            var ukkoSkaalaus = transform.FindChild("ukko");
             ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1);
             var speed = jumpForce / 100 * 7;
             rigidBody.velocity = new Vector2(directionMultiplier * speed, speed);
