@@ -27,7 +27,7 @@ public class Jump : MonoBehaviour {
                      
         }
 
-        if(Input.GetKeyUp("a") || Input.GetKeyUp("d")) {
+        if((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
             var directionMultiplier = Input.GetKeyUp("a") ? -1 : 1;
             var ukkoSkaalaus = transform.FindChild("ukko");
             ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1);
