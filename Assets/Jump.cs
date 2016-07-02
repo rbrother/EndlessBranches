@@ -29,21 +29,13 @@ public class Jump : MonoBehaviour {
         var rigidBody = GetComponent<Rigidbody2D>();
         var jumpBar = transform.FindChild("jumpBar");
         barGrowing = (Input.GetKey("a") || Input.GetKey("d")) && touching;
-        Debug.Log(touching);
         if (barGrowing){
-            ukkoSpriteRenderer.sprite = loadingSprite;
             if (jumpForce <= 100){
             jumpForce = jumpForce + Time.deltaTime * 200;
             }
                      
         }
-
-        if (touching && !barGrowing) {
-            ukkoSpriteRenderer.sprite = regularSprite;
-        }
-
         if((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
-            ukkoSpriteRenderer.sprite = firstFlyingSprite;
             var directionMultiplier = Input.GetKeyUp("a") ? -1 : 1;
             ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1);
             var speed = jumpForce / 100 * 7;
@@ -51,6 +43,13 @@ public class Jump : MonoBehaviour {
             jumpForce = 0;
         }
         jumpBar.localScale = new Vector3(jumpForce / 100 * 45, 1);
+        if (!touching) {
+            ukkoSpriteRenderer.sprite = firstFlyingSprite;
+        }else if (barGrowing) {
+            ukkoSpriteRenderer.sprite = loadingSprite;
+        }else {
+            ukkoSpriteRenderer.sprite = regularSprite;
+        }
     }
 }
 
