@@ -29,6 +29,7 @@ public class Jump : MonoBehaviour {
         var rigidBody = GetComponent<Rigidbody2D>();
         var jumpBar = transform.FindChild("jumpBar");
         barGrowing = (Input.GetKey("a") || Input.GetKey("d")) && touching;
+        Debug.Log(touching);
         if (barGrowing){
             ukkoSpriteRenderer.sprite = loadingSprite;
             if (jumpForce <= 100){
