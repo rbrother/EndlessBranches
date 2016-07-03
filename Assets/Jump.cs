@@ -30,6 +30,7 @@ public class Jump : MonoBehaviour {
         var jumpBar = transform.FindChild("jumpBar");
         barGrowing = (Input.GetKey("a") || Input.GetKey("d")) && touching;
         if (barGrowing){
+            if (jumpForce == 0) jumpForce = 20;
             if (jumpForce <= 100){
             jumpForce = jumpForce + Time.deltaTime * 200;
             }
