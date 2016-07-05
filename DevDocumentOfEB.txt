@@ -58,6 +58,32 @@ TARINA (previously known story in Finnish)
         
         Jotkut halusivat olla symbioosissa ja päähenkilö on hämmentynyt(?) tästä.
 
+		BEGINNING STORY SCRIPT
+
+			(The story starts with a black screen)
+			Masa: But Mom always told me stories back then! 
+			Please?
+			Roffe: She told them for you for like, a month. 
+			Then she was no more.
+			In that short squeeze I would say it was fairly easy to tell a story every day.
+			Masa: Well...
+			Can you come up with a story? You ARE imaginitive.
+			Roffe: Masa, it's not called being imaginative. It's called thinking too much.
+
+		CHARACTERS
+
+			MASA
+
+				PERSONALITY TRAITS
+
+					Childish, daring and little bit self-centered.
+
+			ROFFE
+
+				PERSONALITY TRAITS
+
+					Quiet, not up for challenges and easily annoyed.
+
     MONINPELI (previously known multiplayer in Finnish)
 
         Moninpelissä parasiittimaskit kantajineen (vihreitä) ovat maskettomia asukkaita (liiloja) vastaan ja iskujoukot (keltaisia) toiselta puolelta 
@@ -70,7 +96,13 @@ VISUAALISUUS (the look of the game in Finnish)
 
     MONINPELI
 
-    YKSINPELI
+    YKSINPELI (previously known as solo campaign in Finnish)
+
+	THE DIALOGUE
+
+
+		As a character talks he / she is inside of a green quadrangle. As the person talks there's a dialogue box on the bottom of the screen. The bottom box and the shape surrounding the talking one are connected via a green 
+		line. If the talking one is unknown or unseen only the bottom box will be present.
 
     ASEET		
                 
@@ -81,6 +113,13 @@ VISUAALISUUS (the look of the game in Finnish)
 PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
 
     YKSINPELI (solo campaign in Finnish)
+
+	LAST PILGU FAMILY'S HOUSE'S STRUCTURE
+
+		Terrace | Terrace
+		Staff quarters | Kitchen
+		Bedroom | Office
+		Bathroom | Vestibule (eteinen)
     
         PELIN 100% LÄPÄISY (100% completion of the game in Finnish)
         
