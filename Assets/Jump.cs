@@ -11,6 +11,7 @@ public class Jump : MonoBehaviour {
     SpriteRenderer ukkoSpriteRenderer;
     Sprite firstFlyingSprite;
     Sprite regularSprite;
+    Animator midAir;
    
     // Use this for initialization
     void Start () {
@@ -20,6 +21,8 @@ public class Jump : MonoBehaviour {
         ukkoSkaalaus = transform.FindChild("ukko");
         ukkoSpriteRenderer = ukkoSkaalaus.GetComponent<SpriteRenderer>();
         regularSprite = ukkoSpriteRenderer.sprite;
+        midAir = ukkoSkaalaus.GetComponent<Animator>();
+        midAir.enabled = false;
     }
 	
 	// Update is called once per frame
@@ -45,10 +48,11 @@ public class Jump : MonoBehaviour {
         }
         jumpBar.localScale = new Vector3(jumpForce / 100 * 45, 1);
         if (!touching) {
-            ukkoSpriteRenderer.sprite = firstFlyingSprite;
+            midAir.enabled = true;
         }else if (barGrowing) {
             ukkoSpriteRenderer.sprite = loadingSprite;
         }else {
+            midAir.enabled = false;
             ukkoSpriteRenderer.sprite = regularSprite;
         }
     }
