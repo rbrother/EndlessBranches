@@ -15,7 +15,6 @@ public class startScript : MonoBehaviour {
 	}
 
     void OnMouseDown() {
-        Debug.Log("OnMouseDown has been executed!");
         SceneManager.LoadScene("kentta1");
     }
 }

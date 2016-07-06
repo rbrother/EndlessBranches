@@ -12,4 +12,8 @@ public class exitScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    void OnMouseDown() {
+        Application.Quit();
+    }
 }
