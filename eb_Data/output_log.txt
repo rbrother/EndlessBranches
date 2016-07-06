@@ -14,13 +14,27 @@ Platform assembly: C:\github\EndlessBranches\eb_Data\Managed\UnityEngine.UI.dll 
 Loading C:\github\EndlessBranches\eb_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\github\EndlessBranches\eb_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\github\EndlessBranches\eb_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.169 seconds
+- Completed reload, in  0.200 seconds
 Platform assembly: C:\github\EndlessBranches\eb_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\github\EndlessBranches\eb_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 25Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.554703 ms
+UnloadTime: 0.840156 ms
+OnMouseDown has been executed!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.825494 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 774.
+Total: 0.262946 ms (FindLiveObjects: 0.068913 ms CreateObjectMapping: 0.023459 ms MarkObjects: 0.161775 ms  DeleteObjects: 0.008308 ms)
+
+RoffeChargingHisJump (UnityEngine.Sprite)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 320c -> priority: 1 
+  Thread -> id: fb8 -> priority: 1 
