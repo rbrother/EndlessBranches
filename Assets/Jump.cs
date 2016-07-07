@@ -15,7 +15,7 @@ public class Jump : MonoBehaviour {
    
     // Use this for initialization
     void Start () {
-	    loadingSprite = Resources.Load("RoffeChargingHisJump", typeof(Sprite)) as Sprite;
+	    loadingSprite = Resources.Load("RoffeV2withNoArms", typeof(Sprite)) as Sprite;
         firstFlyingSprite = Resources.Load("RoffeHavingHisLeftFootOut", typeof(Sprite)) as Sprite;
         Debug.Log(loadingSprite);
         ukkoSkaalaus = transform.FindChild("ukko");

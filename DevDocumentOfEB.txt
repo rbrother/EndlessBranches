@@ -69,6 +69,12 @@ TARINA (previously known story in Finnish)
 			Masa: Well...
 			Can you come up with a story? You ARE imaginitive.
 			Roffe: Masa, it's not called being imaginative. It's called thinking too much.
+			Masa: How can you think too much?
+			Roffe: It's complicated, you wouldn't understand.
+			Masa: Hmph. Fine then.
+			Roffe: OK, OK. I ain't the best when it comes to understanding text but let's try the yellow book, now shall we?
+			Masa: Which one?
+			Roffe: I would rather be without a meal for days instead of trying to understand anything in the big one. Let's go with the small one. 
 
 		CHARACTERS
 
@@ -103,6 +109,8 @@ VISUAALISUUS (the look of the game in Finnish)
 
 		As a character talks he / she is inside of a green quadrangle. As the person talks there's a dialogue box on the bottom of the screen. The bottom box and the shape surrounding the talking one are connected via a green 
 		line. If the talking one is unknown or unseen only the bottom box will be present.
+
+	Far-away branches inner color: 61883a
 
     ASEET		
                 
