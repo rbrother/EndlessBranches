@@ -12,6 +12,7 @@ public class Jump : MonoBehaviour {
     Sprite firstFlyingSprite;
     Sprite regularSprite;
     Animator midAir;
+    Transform rightHand;
    
     // Use this for initialization
     void Start () {
@@ -23,6 +24,7 @@ public class Jump : MonoBehaviour {
         regularSprite = ukkoSpriteRenderer.sprite;
         midAir = ukkoSkaalaus.GetComponent<Animator>();
         midAir.enabled = false;
+        rightHand = ukkoSkaalaus.FindChild("Roffe'sRightHand"); 
     }
 	
 	// Update is called once per frame
@@ -39,7 +41,9 @@ public class Jump : MonoBehaviour {
             }
                      
         }
-        if((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
+        //rightHand.localRotation.z = 120 + jumpForce / 100 * 40;
+        rightHand.localEulerAngles = new Vector3(0,0,120 + jumpForce / 100 * 40);
+        if ((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
             var directionMultiplier = Input.GetKeyUp("a") ? -1 : 1;
             ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1);
             var speed = jumpForce / 100 * 7;
