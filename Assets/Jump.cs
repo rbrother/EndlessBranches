@@ -43,9 +43,9 @@ public class Jump : MonoBehaviour {
             }
                      
         }
-        //leftHand.localRotation.z = 120 + jumpForce / 100 * 40;
-        leftHand.localEulerAngles = new Vector3(0,0,120 + jumpForce / 100 * 40);
-        rightHand.localEulerAngles = new Vector3(0,0, -120 - jumpForce / 100 * 40);
+        var handCodeBlock = 120 + jumpForce / 100 * 40;
+        leftHand.localEulerAngles = new Vector3(0,0,handCodeBlock);
+        rightHand.localEulerAngles = new Vector3(0,0, -handCodeBlock);
         if ((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
             var directionMultiplier = Input.GetKeyUp("a") ? -1 : 1;
             ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1);
