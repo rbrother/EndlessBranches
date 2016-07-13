@@ -131,7 +131,7 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
 
     YKSINPELI (solo campaign in Finnish)
 
-	LAST PILGU FAMILY'S HOUSE'S STRUCTURE
+	LAST PILGU FAMILY'S HOUSE STRUCTURE
 
 		Terrace | Terrace
 		Staff quarters | Kitchen
