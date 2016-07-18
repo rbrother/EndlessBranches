@@ -48,12 +48,12 @@ public class Jump : MonoBehaviour {
         rightHand.localEulerAngles = new Vector3(0,0, -handCodeBlock);
         if ((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
             var directionMultiplier = Input.GetKeyUp("a") ? -1 : 1;
-            ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1);
+            ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1,1);
             var speed = jumpForce / 100 * 7;
             rigidBody.velocity = new Vector2(directionMultiplier * speed, speed);
             jumpForce = 0;
         }
-        jumpBar.localScale = new Vector3(jumpForce / 100 * 45, 1);
+        jumpBar.localScale = new Vector3(jumpForce / 100 * 0.8f, 0.007f);
         if (!touching) {
             midAir.enabled = true;
         }else if (barGrowing) {
