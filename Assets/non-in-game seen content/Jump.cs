@@ -14,7 +14,8 @@ public class Jump : MonoBehaviour {
     Animator midAir;
     Transform leftHand;
     Transform rightHand;
-   
+    Sprite onWall;
+
     // Use this for initialization
     void Start () {
 	    loadingSprite = Resources.Load("RoffeV2withNoArms", typeof(Sprite)) as Sprite;
@@ -27,6 +28,7 @@ public class Jump : MonoBehaviour {
         midAir.enabled = false;
         leftHand = ukkoSkaalaus.FindChild("Roffe'sLeftHand");
         rightHand = ukkoSkaalaus.FindChild("Roffe'sRightHand");
+        onWall = Resources.Load("RoffeV2onWall", typeof(Sprite)) as Sprite;
     }
 	
 	// Update is called once per frame
@@ -54,13 +56,12 @@ public class Jump : MonoBehaviour {
             jumpForce = 0;
         }
         jumpBar.localScale = new Vector3(jumpForce / 100 * 0.8f, 0.007f);
-        if (!touching) {
-            midAir.enabled = true;
-        }else if (barGrowing) {
-            ukkoSpriteRenderer.sprite = loadingSprite;
-        }else {
-            midAir.enabled = false;
-            ukkoSpriteRenderer.sprite = regularSprite;
+    }
+
+    void OnCollisionEnter2D(Collision2D coll) {
+        Debug.Log("OnCollisionEnter2D is being executed! The tag is: " + coll.gameObject.tag);
+        if (coll.gameObject.tag == "wall") {
+            ukkoSpriteRenderer.sprite = onWall;
         }
     }
 }

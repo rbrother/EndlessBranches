@@ -14,7 +14,6 @@ public class whiteBoxCollision : MonoBehaviour {
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
-        Debug.Log("Collider triggered! The GameObject's " + coll.gameObject.tag);
         var whiteBox = transform.FindChild("WhiteBox");
         var colorProperties = GetComponent<SpriteRenderer>();
         if (coll.gameObject.tag == "Player") {
