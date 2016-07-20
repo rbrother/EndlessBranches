@@ -62,6 +62,8 @@ public class Jump : MonoBehaviour {
         Debug.Log("OnCollisionEnter2D is being executed! The tag is: " + coll.gameObject.tag);
         if (coll.gameObject.tag == "wall") {
             ukkoSpriteRenderer.sprite = onWall;
+        }else if(coll.gameObject.tag == "floor") {
+            ukkoSpriteRenderer.sprite = regularSprite;
         }
     }
 }
