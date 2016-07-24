@@ -84,6 +84,8 @@ public class Jump : MonoBehaviour {
         if (collisionType == "side" || collisionType == "top") {
             midAir.enabled = true;
             canJump = false;
+        } else {
+            ukkoSkaalaus.localScale = new Vector3(1, 1);
         }
     }
 
