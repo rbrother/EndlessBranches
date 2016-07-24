@@ -15,6 +15,7 @@ public class Jump : MonoBehaviour {
     Transform leftHand;
     Transform rightHand;
     Sprite onWall;
+    bool canJump = false;
 
     // Use this for initialization
     void Start () {
@@ -34,23 +35,21 @@ public class Jump : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         var boxCollider = GetComponent<BoxCollider2D>();
-        var touching = boxCollider.IsTouchingLayers();
         var rigidBody = GetComponent<Rigidbody2D>();
         var jumpBar = transform.FindChild("jumpBar");
-        barGrowing = (Input.GetKey("a") || Input.GetKey("d")) && touching;
+        barGrowing = (Input.GetKey("a") || Input.GetKey("d")) && canJump;
         if (barGrowing){
-            if (jumpForce == 0) jumpForce = 20;
             if (jumpForce <= 100){
-            jumpForce = jumpForce + Time.deltaTime * 200;
+                jumpForce = jumpForce + Time.deltaTime * 200;
             }
                      
         }
         var handCodeBlock = 120 + jumpForce / 100 * 40;
         leftHand.localEulerAngles = new Vector3(0,0,handCodeBlock);
         rightHand.localEulerAngles = new Vector3(0,0, -handCodeBlock);
-        if ((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && touching) {
+        if ((Input.GetKeyUp("a") || Input.GetKeyUp("d")) && canJump) {
             var directionMultiplier = Input.GetKeyUp("a") ? -1 : 1;
-            ukkoSkaalaus.localScale = new Vector3(directionMultiplier, 1,1);
+            ukkoSkaalaus.localScale = new Vector3(directionMultiplier,1);
             var speed = jumpForce / 100 * 7;
             rigidBody.velocity = new Vector2(directionMultiplier * speed, speed);
             jumpForce = 0;
@@ -58,14 +57,41 @@ public class Jump : MonoBehaviour {
         jumpBar.localScale = new Vector3(jumpForce / 100 * 0.8f, 0.007f);
     }
 
-    void OnCollisionEnter2D(Collision2D coll) {
-        Debug.Log("OnCollisionEnter2D is being executed! The tag is: " + coll.gameObject.tag);
-        if (coll.gameObject.tag == "wall") {
+    void OnCollisionEnter2D(Collision2D otherObject) {
+        var direction = otherObject.contacts[0].normal;
+        var collisionType = Collision(direction);
+
+        Debug.Log("OnCollisionEnter2D is being executed! Direction: " + direction + ". The collision type is: " + collisionType);
+
+        if (collisionType == "side") {
             ukkoSpriteRenderer.sprite = onWall;
-        }else if(coll.gameObject.tag == "floor") {
+            midAir.enabled = false;
+            canJump = true;
+        } else if(collisionType == "top") {
             ukkoSpriteRenderer.sprite = regularSprite;
+            midAir.enabled = false;
+            canJump = true;
+        } else if(collisionType == "bottom") {
+            ukkoSkaalaus.localScale = new Vector3(1, 0.8f);
         }
     }
+
+    void OnCollisionExit2D(Collision2D otherObject) {
+        var direction = otherObject.contacts[0].normal;
+        var collisionType = Collision(direction);
+
+
+        if (collisionType == "side" || collisionType == "top") {
+            midAir.enabled = true;
+            canJump = false;
+        }
+    }
+
+    String Collision(Vector2 direction) {            
+        return direction.x < -0.9 || direction.x > 0.9 ? "side" :
+               direction.y > 0.9 ? "top" : "bottom";
+    }
+
 }
 
 //Console used with: Debug.Log(Value or thing to the console);
