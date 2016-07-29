@@ -2,6 +2,10 @@
 
 	TO-DO
 
+		-many enemies
+
+		-some event occurring as an enemy hits the player
+
 		- Link together the "Isoisämme olisivat ylpeitä meistä" document and the lore document.
 
 	FAST-DOWN NOTES

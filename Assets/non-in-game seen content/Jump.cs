@@ -61,7 +61,7 @@ public class Jump : MonoBehaviour {
         var direction = otherObject.contacts[0].normal;
         var collisionType = Collision(direction);
 
-        Debug.Log("OnCollisionEnter2D is being executed! Direction: " + direction + ". The collision type is: " + collisionType);
+        Debug.Log("OnCollisionEnter2D is being executed! Direction: " + direction + ". The collision type is: " + collisionType + " and the tag is: " + otherObject.gameObject.tag);
 
         if (collisionType == "side") {
             ukkoSpriteRenderer.sprite = onWall;
@@ -92,6 +92,10 @@ public class Jump : MonoBehaviour {
     String Collision(Vector2 direction) {            
         return direction.x < -0.9 || direction.x > 0.9 ? "side" :
                direction.y > 0.9 ? "top" : "bottom";
+    }
+
+    void enemyHasHitPlayer(GameObject enemy) {
+        Debug.Log("Roffe was hit by:" + enemy.tag);
     }
 
 }
