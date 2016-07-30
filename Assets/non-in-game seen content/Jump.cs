@@ -16,6 +16,7 @@ public class Jump : MonoBehaviour {
     Transform rightHand;
     Sprite onWall;
     bool canJump = false;
+    Transform fallingTwilight;
 
     // Use this for initialization
     void Start () {
@@ -30,6 +31,7 @@ public class Jump : MonoBehaviour {
         leftHand = ukkoSkaalaus.FindChild("Roffe'sLeftHand");
         rightHand = ukkoSkaalaus.FindChild("Roffe'sRightHand");
         onWall = Resources.Load("RoffeV2onWall", typeof(Sprite)) as Sprite;
+        fallingTwilight = transform.FindChild("blackMatter (2)");
     }
 	
 	// Update is called once per frame
@@ -96,6 +98,7 @@ public class Jump : MonoBehaviour {
 
     void enemyHasHitPlayer(GameObject enemy) {
         Debug.Log("Roffe was hit by:" + enemy.tag);
+        fallingTwilight.position = new Vector3(-23, 0, -10);
     }
 
 }
