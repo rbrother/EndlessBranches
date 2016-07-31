@@ -2,9 +2,7 @@
 
 	TO-DO
 
-		-many enemies
-
-		-some event occurring as an enemy hits the player
+		-watch UI videos
 
 		- Link together the "Isoisämme olisivat ylpeitä meistä" document and the lore document.
 
@@ -170,11 +168,11 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
             
                 Lehvistön päällä oleva alue (1. kaikista), tällä alueella voisi esiintyä laiskannäköisiä leijonia.
             
-            ANCIENT ACORNS
+            ANCIENT ACORN
             
-                Lehvistön sisällä oleva alue, jossa voisi esiintyä vanhannäköisiä tammenterhovihollisia.
+                An area inside the foliage. Would have a massive acorn in the middle of the leaves.
             
-            SERIOUSLY SACRED
+            SACRED SANCTUARY
             
                 Lehvistön alapuolella oleva oksa-alue, joka toimi kauan sitten maskijoukkion kirkkona, jossa heidät "armahdettiin"
                 synneistään.
@@ -198,6 +196,42 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
             SICK SANDS
             
                 Pelin viimeinen alue; sijoittuu puuta ympäröivälle aavikkomaiselle rannalle.
+
+	ENEMIES
+
+		IDEAS
+
+			LAMBER JACK
+
+				OVERVIEW
+
+					A lumberjack-looking Maskfolk member who carries a single huge log as his first-time-when-he-sees-you weapon. He'll throw it and use alternare attacks upon the log being taken away from him.
+					If he sees a Hunted Witch he'll furiously attack him until the witch is dead. This is supposed to parody witch-hunting internet males who see women in a bad light.
+
+			MIGHT KNIGHT
+
+				OVERVIEW
+
+					A sturdy knight who as his main attack will swing his sword around as he jumps around. His helmet can be struck off revealing a female dark-red-head. This turns him into the Hunted Witch.
+
+			HUNTED WITCH
+
+				OVERVIEW
+
+					An in-armor dark-red-head who is attacked by possibly on-scene Lamberjacks. Attacks by jumping around creating fast lethal shock waves. He might look like a woman but his enemy card would reveal 
+					he is actually a man who just wants to look like a woman.
+
+			SOCIOPAL
+
+				OVERVIEW
+
+					A hooded Maskfolk member who has a mask of happiness on his face as you meet him. He won't attack you but...
+
+			FUN PUN
+
+		ALREADY IN-GAME FOES
+
+			LAMBER
                 
         KREDIITEILLÄ OSTETTAVAT ASIAT
         

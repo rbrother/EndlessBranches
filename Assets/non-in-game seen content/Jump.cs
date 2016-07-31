@@ -17,12 +17,13 @@ public class Jump : MonoBehaviour {
     Sprite onWall;
     bool canJump = false;
     Transform fallingTwilight;
+    GameObject auraBar;
+    RectTransform auraBarRect;
 
     // Use this for initialization
     void Start () {
 	    loadingSprite = Resources.Load("RoffeV2withNoArms", typeof(Sprite)) as Sprite;
         firstFlyingSprite = Resources.Load("RoffeHavingHisLeftFootOut", typeof(Sprite)) as Sprite;
-        Debug.Log(loadingSprite);
         ukkoSkaalaus = transform.FindChild("ukko");
         ukkoSpriteRenderer = ukkoSkaalaus.GetComponent<SpriteRenderer>();
         regularSprite = ukkoSpriteRenderer.sprite;
@@ -32,10 +33,14 @@ public class Jump : MonoBehaviour {
         rightHand = ukkoSkaalaus.FindChild("Roffe'sRightHand");
         onWall = Resources.Load("RoffeV2onWall", typeof(Sprite)) as Sprite;
         fallingTwilight = transform.FindChild("blackMatter (2)");
+        auraBar = GameObject.Find("auraBar");
+        auraBarRect = auraBar.GetComponent<RectTransform>();
+        //auraBarRect.localScale = new Vector3(0.5f,1,1);
+        auraBarRect.localEulerAngles = new Vector3(0, 0, 30);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         var boxCollider = GetComponent<BoxCollider2D>();
         var rigidBody = GetComponent<Rigidbody2D>();
         var jumpBar = transform.FindChild("jumpBar");
@@ -98,7 +103,8 @@ public class Jump : MonoBehaviour {
 
     void enemyHasHitPlayer(GameObject enemy) {
         Debug.Log("Roffe was hit by:" + enemy.tag);
-        fallingTwilight.position = new Vector3(-23, 0, -10);
+        fallingTwilight.localPosition = new Vector3(-13.7f, 5.1f, -8);
+  
     }
 
 }

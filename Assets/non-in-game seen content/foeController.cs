@@ -14,7 +14,7 @@ public class foeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(toRight => 50 && toUp =< 100) {
+	    if(toRight >= 50 && toUp <= 100) {
 
         }
 	}
