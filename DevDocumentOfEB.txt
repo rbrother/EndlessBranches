@@ -225,9 +225,13 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
 
 				OVERVIEW
 
-					A hooded Maskfolk member who has a mask of happiness on his face as you meet him. He won't attack you but...
+					A hooded Maskfolk member who has a mask of happiness on his face as you meet him. He won't attack you but he'll take huge knockback from the attacks you throw at him and he regens health above 50%
+					health. As he goes belove that he turns his mask into a frown one, disguises himself as one of the enemies of the area you're in and starts to throw attacks at you that don't damage you but they 
+					might throw you off a tad bit.
 
 			FUN PUN
+
+				[Haven't really come up with anything but the name for this one.]
 
 		ALREADY IN-GAME FOES
 
