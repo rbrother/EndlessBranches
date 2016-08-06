@@ -143,6 +143,22 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
 
 		MELEE ONES
 
+			BONSAI STAFF (drop)
+
+				LOOKS
+
+					A wooden staff with a red band of color on the middle of it and a bonsai-like tree on the top.
+
+				DAMAGE
+
+					Deals 25% damage a swipe.
+
+				DESCRIPTION (+ special attributes)
+
+					Sometimes the rituals failed. Sometimes the Maskfolk didn't get the outcome they desired. Instead of a child they wanted they just got a boring little bonsai tree. This tree deals a respectable
+					amount of damage and the enemies you throw will levitation-freeze the airborne enemies they pass by. Sometimes folks don't want to fly themselves in the cold hard world. They want to instead make
+					others fly.
+
 		THROWABLES
 
 		DEPLOYABLES
@@ -247,7 +263,42 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
 
 				[Haven't really come up with anything but the name for this one.]
 
-			-
+			WOODY WIZARD
+
+				OVERVIEW
+
+					A hooded consisting-of-leaves wizard who carries a wand. While carrying his wand he can levitate an green-borders-and-black-overall pieces that have been 
+					assigned to him. These objects have a movement pattern to them that is used while their wizard has his wand. If the wizard loses his wand the object will 
+					start following the rules of physics with the Rigidbody2D component.
+
+				RESISTANCE
+
+					-None-
+
+				ATTACKS
+
+					WALK-ABOUT
+
+						Woody Wizard (WW) simply walks towards the player and upon getting enough close he'll strike with his wand. This'll deal 2-keys damage.
+
+					LEGIT LEAVES
+
+						Once WW has dropped his wand by being tossed at a surface he'll start running fast towards Masa. As he does this two levitating leaves will orbit around him. If one of the leaves hits Masa
+						it'll deal 1-key damage.
+
+				DROP ITEMS
+
+					LESSER / GREATER CURRENCY
+
+					BOMSAI STAFF
+
+			LAZY LION
+
+				-
+
+			CHICKEN CLOUD
+
+				-
 
 		ALREADY IN-GAME FOES
 
