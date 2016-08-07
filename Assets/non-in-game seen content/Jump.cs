@@ -35,7 +35,7 @@ public class Jump : MonoBehaviour {
     void Update() {
         var boxCollider = GetComponent<BoxCollider2D>();
         var rigidBody = GetComponent<Rigidbody2D>();
-        var jumpBar = transform.FindChild("jumpBar");
+        //var jumpBar = transform.FindChild("jumpBar");
         barGrowing = (Input.GetKey("a") || Input.GetKey("d")) && canJump;
         if (barGrowing) {
             if (jumpForce <= 100) {
@@ -53,7 +53,7 @@ public class Jump : MonoBehaviour {
             rigidBody.velocity = new Vector2(directionMultiplier * speed, speed);
             jumpForce = 0;
         }
-        jumpBar.localScale = new Vector3(jumpForce / 100 * 0.8f, 0.007f);
+        //jumpBar.localScale = new Vector3(jumpForce / 100 * 0.8f, 0.007f);
     }
 
     void OnCollisionEnter2D(Collision2D otherObject) {
