@@ -46,7 +46,10 @@ public class characterStatus : MonoBehaviour {
                 shield = shield - Time.deltaTime * 0.1f;
             }
             if (keysDown == 1 && Input.GetKey(QTEtext)) {
-                    Debug.Log("No longer under attack!");
+                inQTE = false;
+                QteTwilight.SetActive(false);
+                firstQteBunch.SetActive(false);
+                SendMessage("noLongerInQte");
             }
         }
     }

@@ -98,6 +98,12 @@ public class Jump : MonoBehaviour {
         guyPhysics.isKinematic = true;
         midAir.enabled = false;
     }
+
+    void noLongerInQte() {
+        var guyPhysics = GetComponent<Rigidbody2D>();
+        guyPhysics.isKinematic = false;
+    }
+
 }
 //Console used with: Debug.Log(Value or thing to the console);
 

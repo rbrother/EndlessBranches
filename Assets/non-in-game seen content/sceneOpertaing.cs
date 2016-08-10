@@ -14,11 +14,18 @@ public class sceneOpertaing : MonoBehaviour {
 	}
 
     void enemyHasHitPlayer(GameObject foe) {
-        Debug.Log("enemyHasHitPlayer is executed!");
         var enemies = GameObject.FindGameObjectsWithTag("enemy");
         foreach(GameObject enemy in enemies) {
             var enemyAnimation = enemy.GetComponent<Animation>();
             enemyAnimation.enabled = false;
+        }
+    }
+
+    void noLongerInQte() {
+        var enemies = GameObject.FindGameObjectsWithTag("enemy");
+        foreach (GameObject enemy in enemies) {
+            var enemyAnimation = enemy.GetComponent<Animation>();
+            enemyAnimation.enabled = true;
         }
     }
 
