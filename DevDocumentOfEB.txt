@@ -97,7 +97,7 @@ TARINA (previously known story in Finnish)
 			- Wanna-be smart at beginning who takes visual looks from the elemental totem that TTA (ThisText'sAuthor) made while younger.
 			- The hiding nerd who wants to be cool.
 			- Confused scared one.
-			- The French, Finnish and Swedish ones.
+			- The French, Finnish and English one.
 			- The drinkers who experience different moods while drinking and leaning on the counter.
 			- The screaming one who kinda reveals the big twist.
 
@@ -155,11 +155,13 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
 
 				DESCRIPTION (+ special attributes)
 
-					Sometimes the rituals failed. Sometimes the Maskfolk didn't get the outcome they desired. Instead of a child they wanted they just got a boring little bonsai tree. This tree deals a respectable
-					amount of damage and the enemies you throw will levitation-freeze the airborne enemies they pass by. Sometimes folks don't want to fly themselves in the cold hard world. They want to instead make
-					others fly.
+					A melee weapon of a respectable 25%-per-swing damage. As the carrier of it has it out the enemies he throws will stop-on-the-spot the airborne enemies it goes past for a while.
 
-		THROWABLES
+					"As the Symborne made their way up the narrow paths inside the tree they levitated little objects they had to shine some light in the darkness of the tunnels. They were hunted by beasts and there
+					was no time to waste. It was pure speculation to assume they would survive it but even though all seemed hopeless some of them knew that light wins over darkness always in the end...
+					Or does it?"
+
+		THROWABLES (Are collected in an amulet given to Masa)
 
 		DEPLOYABLES
 
@@ -283,20 +285,43 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
 
 					LEGIT LEAVES
 
-						Once WW has dropped his wand by being tossed at a surface he'll start running fast towards Masa. As he does this two levitating leaves will orbit around him. If one of the leaves hits Masa
-						it'll deal 1-key damage.
+						Once WW has dropped his staff by being tossed at a surface he'll start running fast towards Masa. As he does this two levitating leaves will orbit around him. If one of the leaves hits 
+						Masa it'll deal 1-key damage. These leaves would grow or shrink in distance depending if Masa is close or far away from Woody Wizard.
 
 				DROP ITEMS
 
 					LESSER / GREATER CURRENCY
 
-					BOMSAI STAFF
+					BONSAI STAFF
 
 			LAZY LION
 
+				OVERVIEW
+
+					A big-ish lion Maskfolk member with a spiky damaging mane. It jumps around and doesn't really care if you would do something like grab it's tail. Well actually, only way to damage it is either to
+					grab it's tail and throw it or to damage it's tail via weapons and such.
+
+				RESISTANCE
+
+					10% damage resistance.
+
+				ATTACKS
+
+					-
+
+				DROP ITEMS
+
+					-
+
+			CANCEROUS CLOUD
+
 				-
 
-			CHICKEN CLOUD
+			ROOTSFOR
+
+				-
+
+			NOVA CLAW
 
 				-
 

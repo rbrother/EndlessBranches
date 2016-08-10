@@ -1,37 +1,40 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class characterStatus : MonoBehaviour {
 
-    Transform fallingTwilight;
     RectTransform auraBarRect;
     GameObject auraBar;
     public static bool inQTE;
     float shield;
-    GameObject parentOfQTE;
     System.Random random;
     string QTEtext;
-    GameObject pressable;
-    TextMesh pressableOfQTE;
+    RectTransform TwilightComponent;
+    GameObject QteTwilight;
+    GameObject firstQteBunch;
+    GameObject QtePressable;
+    Text pressableLetter;
 
     // Use this for initialization
     void Start () {
-        fallingTwilight = transform.FindChild("blackMatter (2)");
+        QteTwilight = GameObject.Find("QteTwilight");
+        TwilightComponent = QteTwilight.GetComponent<RectTransform>();
         auraBar = GameObject.Find("shield");
         auraBarRect = auraBar.GetComponent<RectTransform>();
         inQTE = false;
         shield = 1;
-        parentOfQTE = transform.FindChild("firstQTE").gameObject;
-        parentOfQTE.SetActive(false);
         random = new System.Random();
-        pressable = parentOfQTE.transform.FindChild("QTE Pressable").gameObject;
-        pressableOfQTE = pressable.GetComponent<TextMesh>();
+        QteTwilight.SetActive(false);
+        firstQteBunch = GameObject.Find("firstQtePressableBunch");
+        firstQteBunch.SetActive(false);
+        QtePressable = firstQteBunch.transform.FindChild("QtePressable").gameObject;
+        pressableLetter = QtePressable.GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update() {
-        //Input.GetKeyUp("a") || Input.GetKeyUp("d")) && canJump
         if (inQTE) {
             var keysDown = 0;
             if (Input.GetKey("a")) keysDown++;
@@ -49,9 +52,9 @@ public class characterStatus : MonoBehaviour {
     }
 
     void enemyHasHitPlayer(GameObject enemy) {
-        fallingTwilight.localPosition = new Vector3(-13.7f, 5.1f, -8);
+        QteTwilight.SetActive(true);
+        firstQteBunch.SetActive(true);
         inQTE = true;
-        parentOfQTE.SetActive(true);
         var n = random.Next(1, 4);
         if(n == 1) {
             QTEtext = "w";
@@ -62,6 +65,6 @@ public class characterStatus : MonoBehaviour {
         }else {
             QTEtext = "a";
         }
-        pressableOfQTE.text = QTEtext;
+        pressableLetter.text = QTEtext;
     }
 }
