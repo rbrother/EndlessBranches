@@ -184,15 +184,17 @@ PELIMEKANIIKALLISET AIHEET (gameplay topics in Finnish)
                 Pelaaja saa Wilfire:n voittamisen ansiosta tietää siitä, että on ollut symbioosissa maskin kanssa kaiken aikaa ja pelaajalla
                 on nyt mahdollisuus taistella kaikkia pelin bosseja vastaan uudestaan "Areenalla".
                 
-        POMOT
+        POMOT (bosses in Finnish)
     
-            LISÄPOMOT
+        	LISÄPOMOT
         
-                Kun pelaaja on voittanut viimeisen pomon, hän saa tästä palkinnoksi spesiaaliavaimen ensimmäiseen lisäpomoon. Jotta ensimmäisen
-                lisäpomon oven voi avata (ovi on piilotettu jossakin pelin kentässä), täytyy pelaajalla olla kymmenen #1-spesiaaliavainta.
-                Nämä muuta yhdeksän avainta ovat ripoteltuna pelin kenttiin. Ekasta lisäpomosta saa yhden #2-spesiaaliavaimen. Toisen lisäpomon oveen
-                tarvitaan 20 avainta jne. Lisäpomoja on viisi ja ne kaikki läpäistyään on yhden kriteerin täyttämisen lähempänä päästäkseen Wilfire:n
-                luokse.
+                	Kun pelaaja on voittanut viimeisen pomon, hän saa tästä palkinnoksi spesiaaliavaimen ensimmäiseen lisäpomoon. Jotta ensimmäisen
+                	lisäpomon oven voi avata (ovi on piilotettu jossakin pelin kentässä), täytyy pelaajalla olla kymmenen #1-spesiaaliavainta.
+                	Nämä muuta yhdeksän avainta ovat ripoteltuna pelin kenttiin. Ekasta lisäpomosta saa yhden #2-spesiaaliavaimen. Toisen lisäpomon oveen
+                	tarvitaan 20 avainta jne. Lisäpomoja on viisi ja ne kaikki läpäistyään on yhden kriteerin täyttämisen lähempänä päästäkseen Wilfire:n
+                	luokse.
+
+		Iverlust (2nd area boss)
             
         ALUEET
         
